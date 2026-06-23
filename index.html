@@ -4,21 +4,39 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/png" href="/Portfolio-Tirza/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Script untuk handle refresh di GitHub Pages -->
+    <script>
+      (function() {
+        // Restore path setelah redirect dari 404.html
+        const redirect = sessionStorage.redirect;
+        if (redirect && redirect !== location.pathname) {
+          sessionStorage.removeItem('redirect');
+          history.replaceState(null, null, redirect);
+        }
+      })();
+    </script>
+    
     <!-- DNS prefetch and preconnect for faster resource loading -->
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
     <!-- Preload critical images with better sizing -->
-    <link rel="preload" as="image" href="/src/assets/aboutme_journal-400w.webp" type="image/webp" fetchpriority="high" media="(max-width: 768px)">
-    <link rel="preload" as="image" href="/src/assets/aboutme_journal-800w.webp" type="image/webp" fetchpriority="high" media="(min-width: 769px)">
+    <link rel="preload" as="image" href="/Portfolio-Tirza/src/assets/aboutme_journal-400w.webp" type="image/webp" fetchpriority="high" media="(max-width: 768px)">
+    <link rel="preload" as="image" href="/Portfolio-Tirza/src/assets/aboutme_journal-800w.webp" type="image/webp" fetchpriority="high" media="(min-width: 769px)">
+    
     <!-- Preload first few stickers for above-the-fold content -->
-    <link rel="preload" as="image" href="/src/assets/sticker_1.webp" type="image/webp">
-    <link rel="preload" as="image" href="/src/assets/sticker_2.webp" type="image/webp">
-    <link rel="preload" as="image" href="/src/assets/sticker_3.webp" type="image/webp">
-    <link rel="preload" as="image" href="/src/assets/sticker_4.webp" type="image/webp">
-    <!-- Font preloading to reduce network dependency chain -->
-    <link rel="preload" as="font" href="/Portfolio-Tirza/assets/PUNKBABE%20TRIAL-C1ux1DUg.ttf" type="font/ttf" crossorigin>
-    <link rel="preload" as="font" href="/Portfolio-Tirza/assets/DK%20Crayonista-6wT9ZWgf.ttf" type="font/ttf" crossorigin>
+    <link rel="preload" as="image" href="/Portfolio-Tirza/src/assets/sticker_1.webp" type="image/webp">
+    <link rel="preload" as="image" href="/Portfolio-Tirza/src/assets/sticker_2.webp" type="image/webp">
+    <link rel="preload" as="image" href="/Portfolio-Tirza/src/assets/sticker_3.webp" type="image/webp">
+    <link rel="preload" as="image" href="/Portfolio-Tirza/src/assets/sticker_4.webp" type="image/webp">
+    
+    <!-- Font preloading -->
+    <link rel="preload" as="font" href="/Portfolio-Tirza/src/assets/punkbabe/PUNKBABE TRIAL.ttf" type="font/ttf" crossorigin>
+    <link rel="preload" as="font" href="/Portfolio-Tirza/src/assets/dk_crayonista/DK Crayonista.ttf" type="font/ttf" crossorigin>
+    
     <title>Tirza Febiana</title>
+    
     <style>
       /* Critical CSS for initial render - Above the fold styles */
       * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -69,16 +87,16 @@
       /* Font faces with swap for better performance */
       @font-face {
         font-family: 'Punk Babe';
-        src: url('/Portfolio-Tirza/assets/PUNKBABE%20TRIAL-C1ux1DUg.ttf') format('truetype');
+        src: url('/Portfolio-Tirza/src/assets/punkbabe/PUNKBABE TRIAL.ttf') format('truetype');
         font-display: swap;
       }
       @font-face {
         font-family: 'DK Crayonista';
-        src: url('/Portfolio-Tirza/assets/DK%20Crayonista-6wT9ZWgf.ttf') format('truetype');
+        src: url('/Portfolio-Tirza/src/assets/dk_crayonista/DK Crayonista.ttf') format('truetype');
         font-display: swap;
       }
     </style>
-    <script type="module" crossorigin src="/Portfolio-Tirza/assets/index-B_lmE4ZW.js"></script>
+    <script type="module" crossorigin src="/Portfolio-Tirza/assets/index-GcMpgmey.js"></script>
     <link rel="modulepreload" crossorigin href="/Portfolio-Tirza/assets/domegallery-BnHQL8cU.js">
     <link rel="modulepreload" crossorigin href="/Portfolio-Tirza/assets/vendor-BUISI1qn.js">
     <link rel="stylesheet" crossorigin href="/Portfolio-Tirza/assets/index-DvXPyxOb.css">
